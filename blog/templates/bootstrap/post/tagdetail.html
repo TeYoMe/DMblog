@@ -1,0 +1,15 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}My Blog {% endblock %}
+
+{% block content %}
+    <h1>My Blog</h1>
+    {% for post in tag_posts %}
+        <li>
+            <a href="{{ post.get_absolute_url }}">
+                {{ post.title }}
+            </a>
+        </li>
+    {% endfor %}
+
+{% endblock %}

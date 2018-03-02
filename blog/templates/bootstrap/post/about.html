@@ -1,0 +1,147 @@
+{% extends "bootstrap/base.html" %}
+{% load staticfiles %}
+{% load blog_tags %}
+
+{% block content %}
+    <!-- start site's main content area -->
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content">
+                    <article id=110 class="post">
+                        <h4>关于</h4>
+                        <p>DMblog--基于python3.5, Django1.11的个人博客</p>
+                        <h4>主要功能: </h4>
+                        <ul>
+                            <li>博文的基本要素，文章，分类，标签，归档等功能</li>
+                            <li>侧边栏功能，不同的页面侧边栏显示的内容不同</li>
+                            <li>文章支持markdown显示和语法高亮</li>
+                            <li>站点地图和RSS订阅功能</li>
+                            <li>侧边栏功能，针对不同的页面侧边栏显示的内容不同</li>
+                            <li>...更多功能，敬请期待...</li>
+
+                        </ul>
+                        <hr>
+                        <p>本站github地址为:</p>
+                        <a href="https://git.coding.net/emind/DMblog.git">https://git.coding.net/emind/DMblog.git</a>
+                        <p>欢迎大家fork，star，或者提交pr</p>
+                        <hr>
+                        <h4>更新日志: </h4>
+
+                        <h5>V 2.0</h5>
+                        <ul>
+                            <li>完成首页部分页面的编写和功能</li>
+                            <li>完成关于部分页面编写和功能</li>
+                            <li>完成分类部分页面编写和功能</li>
+                            <li>完成标签部分页面编写和功能</li>
+                            <li>完成仓库部分页面编写和功能</li>
+                            <li>暂时不做登陆和多级评论功能</li>
+                            <li>创建Tag模型实现标签功能，弃用django-taggit</li>
+                        </ul>
+
+                        <h5>V 1.0</h5>
+                        <ul>
+                            <li>完成博客基本模型部分</li>
+                            <li>完成博客基本视图部分</li>
+                            <li>完成博客基本url部分</li>
+                            <li>增加参数使admin界面更易于管理</li>
+                            <li>实现sitemap和RSS功能</li>
+                            <li>博客标签功能使用django-taggit实现</li>
+                            <li>实现博客基本功能，实现简单的模板和html</li>
+                        </ul>
+
+                        <h5>V 1.0</h5>
+                        <ul>
+                            <li>完成博客基本模型部分</li>
+                            <li>完成博客基本视图部分</li>
+                            <li>完成博客基本url部分</li>
+                            <li>增加参数使admin界面更易于管理</li>
+                            <li>使用django-taggit作为博客标签的设置</li>
+                            <li>实现博客基本功能，实现简单的模板和html</li>
+                        </ul>
+
+                        <h5>V 1.0</h5>
+                        <ul>
+                            <li>完成博客基本模型部分</li>
+                            <li>完成博客基本视图部分</li>
+                            <li>完成博客基本url部分</li>
+                            <li>增加参数使admin界面更易于管理</li>
+                            <li>使用django-taggit作为博客标签的设置</li>
+                            <li>实现博客基本功能，实现简单的模板和html</li>
+                        </ul>
+                    </article>
+                </main>
+
+                <aside class="col-md-4 sidebar">
+
+                    <div class="widget">
+                        <div class="imgbox" style="text-align: center;">
+                            <img class="avatarimg" src="{% static 'img/avatar.jpg' %}" alt="">
+                        </div>
+                        <nav class="viewnav">
+                            <div class="viewbox postview">
+                                <a href="/archvies">
+                                    <span>{% allpost_count %}</span>
+                                    <br>
+                                    <span>Posts</span>
+                                </a>
+                            </div>
+                            <div class="viewbox cateview">
+                                <a href="/categories">
+                                    <span>{% allcate_count %}</span>
+                                    <br>
+                                    <span>Categories</span>
+                                </a>
+                            </div>
+                            <div class="viewbox tagsview">
+                                <a href="/tags">
+                                    <span>{% alltag_count %}</span>
+                                    <br>
+                                    <span>Tags</span>
+                                </a>
+                            </div>
+                        </nav>
+
+                        <hr>
+
+                        <h4>DMblog</h4>
+                        <p>基于python3.6和django1.11的个人博客</p>
+                        <p>由Django和Bootstrap强力驱动</p>
+                        <p>源码托管于 coding 和 github</p>
+                        <p>源码仓库地址：</p>
+                        <a href="https://git.coding.net/emind/DMblog.git">https://git.coding.net/emind/DMblog.git</a>
+                        <p>欢迎大家fork，star，或者提交pr</p>
+
+                    </div>
+
+                    <div class="widget">
+                        <h4 class="title">关于内容</h4>
+                        <p>文章为编程总结或开发日志或备忘记录</p>
+                        <p>文章皆为个人观点，不代表所服务的公司</p>
+                        <p>文章非特别说明皆为原创,转载需注明出处</p>
+                        <span>版权声明: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">CC BY-NC-ND 3.0</a></span>
+
+                    </div>
+
+                    <div class="widget">
+                        <h4 class="title">社交信息</h4>
+                        <ul>
+                            <li>Github: @TeYoMe</li>
+                            <li>E-mail: 217leesin@gmail.com</li>
+                            <li>Social: </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="widget">
+                        <h4 class="title">订阅地址</h4>
+                        <p>如喜欢本站内容可添加RSS订阅</p>
+                    </div>
+
+
+                </aside>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
